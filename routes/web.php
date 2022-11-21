@@ -12,11 +12,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', function () {
     return "hola";
 });
 Route::get('rama1/rama2', function () {
     return "con una rama ";
+});
+Route::get('rama1/{rama2}', function ($rama2) {
+    return "con una rama con bariable: $rama2";
 });
 Route::get('cursos/{cursito}', function ($cursito) {
     return "Esta es una variable: $cursito";
